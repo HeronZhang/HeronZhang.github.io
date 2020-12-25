@@ -1,7 +1,212 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>平安成电智慧通行</title>
+    <!--    <link rel="stylesheet" href="index.css">-->
+    <style>
+        body {
+            /* background-color: #f8f8f8; */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background: white;
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .title {
+            color: #007600;
+            font-weight: 900;
+            font-size: 24px;
+            margin-top: 70px;
+            margin-left: 15px;
+        }
+
+        .line {
+            margin-top: 40px;
+            width: 100%;
+            height: 1px;
+            background: #f6f6f6;
+        }
+
+        .lists {
+            box-sizing: border-box;
+            padding: 10px 20px;
+        }
+
+        .list img {
+            width: 18px;
+            height: 18px;
+        }
+
+        .list_txt {
+            color: #000000;
+            font-size: 16px;
+        }
+
+        .list {
+            padding: 12px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .list_cont {
+            width: 68%;
+            text-align: right;
+            font-weight: 900;
+            font-size: 20px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .time_txt {
+            color: #00bf9e;
+            max-width: 60%;
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+            /* overflow-x: scroll; */
+        }
+
+        .time_scroll {
+            width: 100%;
+            transform: translateX(-50px);
+            animation: scroll 12s infinite linear;
+        }
+
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(-100px);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .toPerson {
+            position: relative;
+            left: 50%;
+            margin-top: 10px;
+            transform: translateX(-50%);
+            background: #01c4a4;
+            width: 130px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 0;
+            color: #fff;
+            border-radius: 3px;
+            box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 3px;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            margin-top: 23px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<div class="container">
+    <div class="title">本科用户，出校登记成功！</div>
+    <div class="line"></div>
+    <div class="lists">
+        <div class="list">
+            <svg width="20px" height="20px" viewBox="0 0 90 90" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>用户</title>
+                <g id="TabBar" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="用户" fill="#777575" fill-rule="nonzero">
+                        <rect id="矩形" opacity="0" x="0" y="0" width="90" height="90"></rect>
+                        <path d="M44.9999995,45.0000005 C57.4335,45.0000005 67.4999995,34.9335006 67.4999995,22.5000005 C67.4999995,10.0665008 57.4335,4.50492497e-07 44.9999995,4.50492497e-07 C39.0322631,-0.00119300426 33.3086063,2.36895248 29.088779,6.58877979 C24.8689516,10.8086071 22.4988061,16.5322638 22.4999995,22.5000005 C22.4999995,34.9335006 32.5665,45.0000005 44.9999995,45.0000005 Z M45,51.4282504 C29.9835,51.4282504 0,60.0435003 0,77.1435001 L0,90 L90,90 L90,77.1435001 C90,60.0435003 60.0165,51.4282504 45,51.4282504 Z"
+                              id="形状"></path>
+                    </g>
+                </g>
+            </svg>
+            <div class="list_txt">用户姓名</div>
+            <div class="list_cont">张浩然</div>
+        </div>
+        <div class="list">
+            <svg id="type" width="20px" height="20px" viewBox="0 0 40 40" version="1.1"
+                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>TabBar</title>
+                <g id="TabBar" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <path d="M20.8393632,22.9131833 C16.8547998,23.9983923 12.498794,27.4131833 12.498794,30.7411576 L12.498794,35 L1.24939701,35 C0.559575494,35 0,34.4405145 0,33.7508039 L0,30.8327974 C0,25.2958199 11.0178485,22.5030948 16.5364206,22.5030948 C17.761698,22.4983923 19.2571153,22.6382637 20.8393632,22.9131833 L20.8393632,22.9131833 Z M12.498794,20 C8.355041,20 4.99758804,16.6430868 4.99758804,12.5 C4.99758804,8.35691318 8.355041,5 12.498794,5 C16.642547,5 20,8.35691318 20,12.5 C20,16.6430868 16.642547,20 12.498794,20 L12.498794,20 Z M29.0400386,22.4983923 C32.2672455,22.4163987 34.9734684,19.7636656 35.1230101,16.5418006 C35.2821997,13.0209003 32.5132658,10.073955 29.0062711,10.0064309 L28.7554269,10.0064309 C25.3063193,10.073955 22.5615051,12.9292605 22.62904,16.3778135 C22.696575,19.8263666 25.5523396,22.585209 29.0400386,22.4983923 Z M28.750603,25.0016077 C24.997588,25.0016077 17.501206,27.2347267 17.501206,31.6672026 L17.501206,33.7508039 C17.501206,34.4405145 18.0607815,35 18.750603,35 L38.750603,35 C39.4404245,35 40,34.4405145 40,33.7508039 L40,31.6672026 C40,27.2299035 32.5036179,25.0016077 28.750603,25.0016077 L28.750603,25.0016077 Z"
+                          id="形状" fill="#777575" fill-rule="nonzero"></path>
+                    <rect id="矩形" fill-opacity="0" fill="#D8D8D8" x="0" y="0" width="40" height="40"></rect>
+                </g>
+            </svg>
+
+            <div class="list_txt">登记类型</div>
+            <div class="list_cont">本科生</div>
+        </div>
+        <div class="list">
+            <svg width="20px" height="20px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>zhong</title>
+                <g id="TabBar" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="zhong" fill="#777575" fill-rule="nonzero">
+                        <rect id="矩形" opacity="0" x="0" y="0" width="40" height="40"></rect>
+                        <path d="M37,22.533474 C37,31.6273726 29.6119614,39 20.4996963,39 C11.3874312,39 4,31.6273726 4,22.533474 C4,13.8624073 10.7197666,6.77253857 19.2435233,6.12985028 C19.2425111,6.10774405 19.2305668,6.08885328 19.2305668,6.06654609 L19.2305668,3.53337353 L14.1538462,3.53337353 C13.4529805,3.53337353 12.8845142,2.96624834 12.8845142,2.26688773 C12.8845142,1.56712519 13.4529805,1 14.1538462,1 L26.8459514,1 C27.5472219,1 28.1154858,1.56712519 28.1154858,2.26688773 C28.1154858,2.96604738 27.5470195,3.53337353 26.8459514,3.53337353 L21.7688259,3.53337353 L21.7688259,6.06674705 C21.7688259,6.08905424 21.7574889,6.10794502 21.7568816,6.13005125 C30.2800309,6.77253857 37,13.8624073 37,22.533474 Z M20.4996963,8.60012058 C12.7891624,8.60012058 6.53866398,14.8382967 6.53866398,22.533675 C6.53866398,30.2280485 12.7891624,36.4662245 20.4996963,36.4662245 C28.2108376,36.4662245 34.4615385,30.2280485 34.4615385,22.533675 C34.4615385,14.8380957 28.2108376,8.60012058 20.4996963,8.60012058 Z M20.4996963,26.3333333 C18.3968971,26.3333333 16.6923077,24.6319578 16.6923077,22.533474 C16.6923077,20.8809331 17.7551455,19.4892457 19.2303643,18.9657301 L19.2303643,12.3997789 C19.2303643,11.7002174 19.7988307,11.1328912 20.4996963,11.1328912 C21.2011693,11.1328912 21.7688259,11.7002174 21.7688259,12.3997789 L21.7688259,18.9657301 C23.2444496,19.4892457 24.3078948,20.8809331 24.3078948,22.533474 C24.3078948,24.6319578 22.6031029,26.3333333 20.4996963,26.3333333 Z"
+                              id="形状"></path>
+                    </g>
+                </g>
+            </svg>
+            <div class="list_txt">登记时间</div>
+            <div class="list_cont">
+                <div>
+                    <marquee id="list_time" class="time_txt" scrolldelay="140">
+                        2020-12-20 19:53:19
+                    </marquee>
+                    <!--                        <div class="time_scroll" id="list_time">2020-12-20 19:53:19</div>-->
+                </div>
+            </div>
+        </div>
+        <div class="toPerson">前往个人二维码</div>
+        <img class="logo"
+             src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1608475520844&di=49349dd0f0dfb6b702aa598a40d86313&imgtype=0&src=http%3A%2F%2Fimg.ccutu.com%2Fupload%2Fimages%2F2017-6%2Fp00039697.png"
+             alt="" height="20px" width="20px">
+    </div>
+    <script type="text/javascript">
+        Date.prototype.Format = function (fmt) {
+            var o = {
+                "M+": this.getMonth() + 1, //月份
+                "d+": this.getDate(), //日
+                "H+": this.getHours(), //小时
+                "m+": this.getMinutes(), //分
+                "s+": this.getSeconds(), //秒
+                "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+                "S": this.getMilliseconds() //毫秒
+            };
+            if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+            for (var k in o)
+                if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+            return fmt;
+        }
+
+        var date = new Date().Format("yyyy-MM-dd HH:mm:ss");
+        document.getElementById("list_time").innerText = date;
+
+    </script>
 </body>
+
 </html>
